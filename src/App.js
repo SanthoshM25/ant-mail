@@ -10,6 +10,7 @@ export default function App() {
   return (
     <Router intialComponent={Login}>
       <Switch>
+        <Route path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route path="/home/:email" component={Home} />
