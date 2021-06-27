@@ -8,9 +8,9 @@ import HistoryList from "./components/HistoryList";
 
 export default function App() {
   return (
-    <Router intialComponent={Login}>
+    <Router>
       <Switch>
-        <Route path="/" component={Home} />
+        <Route path="/" component={Login} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route path="/home/:email" component={Home} />
