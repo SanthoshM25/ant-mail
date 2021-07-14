@@ -15,12 +15,12 @@ const CONNECTION_URL =
 
 // const CONNECTION_URL="mongodb://localhost:27017/antmailDB"
 const Port = process.env.PORT || 3001;
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static());
-  app.get("*", (req, res) => {
-    req.sendFile(path.resolve("../", "build", "index.html"));
-  });
-}
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static());
+//   app.get("*", (req, res) => {
+//     req.sendFile(path.resolve("../", "build", "index.html"));
+//   });
+// }
 
 let flag = false;
 
@@ -135,7 +135,7 @@ app.post("/login/auth", async (req, res) => {
           }
         });
       } else {
-        console.log("account not find");
+        res.send("account not found");
       }
     } else {
       res.send(err);

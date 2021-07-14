@@ -25,7 +25,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 400px;
+  max-width: 400px;
   height: auto;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.25);
@@ -45,7 +45,7 @@ header {
 
 .container input {
   margin: 1em;
-  width: 20em;
+  width: 15em;
   height: 2.5em;
   border-radius: 5px;
   border: none;
@@ -91,6 +91,12 @@ a:hover {
   font-weight: bold;
   font-size: 1.2rem;
   opacity: 1;
+}
+
+.new-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* home */
@@ -168,7 +174,7 @@ a:hover {
 
 /* history */
 
-.history .history-container {
+.history-container {
   height: 100vh;
   width: 100vw;
   display: flex;

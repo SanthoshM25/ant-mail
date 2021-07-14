@@ -14,11 +14,11 @@ const History = () => {
     axios
       .get(" http://localhost:3001/posts/history")
       .then((histories) => {
-        console.log(histories);
         setHistory(histories.data);
       })
       .catch((err) => {
         console.log(`error: ${err}`);
+        alert('something went wrong')
       });
   }, []);
 
@@ -32,8 +32,6 @@ const History = () => {
           </Link>
         </div>
         <div className="history-listing">
-          <header>History</header>
-
           {history.map((h) => (
             <div className="history-card" key={h._id}>
               <div onClick={() => clickHandler(h)}>

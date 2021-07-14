@@ -19,6 +19,8 @@ function Login() {
       .then((res) => {
         if (res.data === "incorrect password") {
           alert("Incorrect password");
+        } else if (res.data === "account not found") {
+          alert("Account not found");
         } else {
           console.log(res.data);
           pageHistory.push("/home/" + res.data.email);
@@ -64,9 +66,8 @@ function Login() {
           />
         </div>
         <div className="new-user">
-          <p>
-            New User? <Link to="/signup">create account</Link>
-          </p>
+          <p>New User?</p>
+          <Link to="/signup">create account</Link>
         </div>
       </div>
     </div>
